@@ -1,0 +1,22 @@
+.map-footer-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/images/map.png);
+    background-size: cover;
+}
+.contacts-container{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contacts-wrapper{
+    width: 380px;
+    height: 290px;
+    background-color: #fcfcfc;
+    opacity: 0.85;
+    border-radius: 2%;
+}

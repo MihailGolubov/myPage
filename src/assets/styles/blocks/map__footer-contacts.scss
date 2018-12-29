@@ -1,0 +1,103 @@
+.map__container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/images/map.png);
+    background-size: cover;
+}
+.map__footer-contacts{
+    position: relative;
+}
+.footer__contact{
+    width: 380px;
+    height: 290px;
+    background-color: #fcfcfc;
+    opacity: 0.85;
+    border-radius: 1%;
+}
+.footer__contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.my__contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75%;
+    margin-left: 40px;
+}
+.link__contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.contact__name-txt{
+    text-align: center;
+    color: #373e42;
+    font-family: bernier;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+}
+.contact__icons{
+    fill: #00bea4;
+}
+.svg-icon_skype{
+    width: 24px;
+    height: 24px;
+}
+.svg-icon_gmail{
+    width: 23px;
+    height: 17px;
+}
+.svg-icon_phone{
+    width: 19px;
+    height: 18px;
+}
+.svg-icon_marker{
+    width: 19px;
+    height: 24px;
+}
+.contact__name{
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contact__name-txt{
+    margin-top: 35px;
+    width: 127px;
+    height: 26px;
+    position: relative;
+}
+.contact__name-txt::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: 0.2;
+    left: -25%;
+    top: 70%;
+}
+.contact__name-txt::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: .2;
+    right: -25%;
+    top: 70%;
+}
+.contact__name{
+    opacity: 0.8;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+}

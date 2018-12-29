@@ -1,0 +1,69 @@
+.header{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/images/headerBg.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: hidden;
+}
+.header-socials{
+    position: absolute;
+    left: 40px;
+    top: 35px;
+}
+.header::after{
+    content: "";
+    right: 0;
+    border-width: 0 0 8.8vw 50vw;
+    border-color: transparent transparent #eeebdf transparent;
+}
+.header::after{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+}
+.header::before {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+}
+.header::before{
+    left: 0;
+    border-width: 8.8vw 0 0 50vw;
+    border-color: transparent transparent transparent #f4f5f0;
+    border-left-color: #efeee9;
+}
+.header-socials .svg__icon-vk {
+    top: 2.5px;
+}
+.header-socials .socials svg {
+    fill: #c2d6d6;
+}
+.header-socials .socials svg:hover {
+    fill: #ffffff;
+}
+.svg__arow-down{
+    width: 26px;
+    height: 16px;
+    opacity: 0.7;
+    fill: #ffffff;
+}
+.header--works{
+    height: 70vh;
+}
+.me__info-container-works{
+    top: 45% !important;
+}
+.header--blog{
+    height: 60vh;
+}

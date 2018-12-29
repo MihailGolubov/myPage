@@ -1,0 +1,44 @@
+.footer-socials{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+.about-footer-socials{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.svg__icon-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #f9f9f9;
+    border-radius: 50%;
+    opacity: .5;
+}
+.svg__icon-footer{
+    margin-right: 10px;
+}
+.svg__icon-footer:hover {
+    background-color: #fff;
+    .svg-icon{
+        fill: #3d5556;
+    }
+}
+
+.svg-icon{
+    fill: #aaadae;
+}
+.svg-icon_vk{
+    width: 23px;
+    height: 13px;
+    opacity: 0.5;
+}
+.footer-link a{
+    width: auto;
+    height: 100%;
+}

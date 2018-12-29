@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./main.min.css")
+    title Document
+body
+    .about-wrapper
+      header.header
+          .user-wrap
+            .user
+              .user__photo
+                img.img-border(src="./assets/images/mefunn.jpg", alt="")
+              span.user__name Михаил Голубов
+              span.user__profession Личный сайт веб разработчика
+          .navigation
+              .navigation-container
+                .navigation__closed
+                  a.closed__icon(href="#")
+                .navigation-open
+                  .navigation-links
+                    ul.navigation-links__wrapper
+                      li.navigation-links__elem.link-elem--1
+                        a.navigation-anchor(href="#")
+                          p.links-text Мои работы
+                      li.navigation-links__elem.link-elem--2
+                        a.navigation-anchor(href="#")
+                          p.links-text Блог
+                      li.navigation-links__elem.link-elem--3
+                        a.navigation-anchor(href="#")
+                          p.links-text Обо мне
+                      li.navigation-links__elem.link-elem--4
+                        a.navigation-anchor(href="#")
+                          p.links-text Авторизация
+          .header__arrow-down
+            a.svg__arrow-header(href="#aboutContent")
+              svg.svg__arow-down
+                use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
+          .header-socials
+              .socials
+                .social.social--vk
+                  a.svg-vk(href="about.html")
+                    svg.svg__icon-vk
+                      use(xlink:href='./assets/images/icons/sprite.svg#vk')
+                .social.social--github
+                  a.svg-github(href="#")
+                    svg.svg__icon-github
+                      use(xlink:href='./assets/images/icons/sprite.svg#github')
+                .social.social--in
+                  a.svg-in(href="#")
+                    svg.svg__icon-in
+                      use(xlink:href='./assets/images/icons/sprite.svg#in')
+      .about-content
+        .content-wrapper
+          .content-left
+            .left-column
+              .content__left-txt
+                img.about__background-txt(src="./assets/images/about_h-bg.png", alt="")
+                span.left__txt-about Обо мне
+            .right-column
+              .column-info
+                .info__content-picture
+                  img.my__info-picture(src="./assets/images/emitor.jpg", alt="")
+                .info__content__details
+                  .info__about-me
+                    span.about__me-text
+                  .info__content-text
+                    span.about__me-details
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis fuga? Quae, minus, magni recusandae nihil eos aut iure ducimus et quo sapiente quisquam magnam vero a laborum expedita. Blanditiis?<br>
+                      <br>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quis vero saepe culpa in, officiis maiores iure animi reiciendis accusamus repellat esse, autem magnam velit similique et. Nisi, at non?                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quam illo maiores nihil voluptatum laudantium quidem expedita eius error voluptas temporibus dolore at qui repudiandae fuga corrupti, in enim deserunt!
+          .content-right
+            .right-container
+              .my__utility-container
+                h1.content__my-utility Чем я могу быть<br>вам полезен
+              .my__utility__details Больше всего меня привлекет Frontend разработка,но я также знаком и могу решать не сложные задачи на Backend.Но давай по порядку.
+              .skills-container
+                .skills-rows
+                  .skills-row.skills-row-frontend
+                    h3.name__circle Frontend
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='75,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text HTML5
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text CSS3
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text JavaScript and<br>jQuery
+                .skills-rows
+                  .skills-row.skills-row-Backend
+                    h3.name__circle Backend
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text PHP
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text mySQL
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text Node.js 
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text Mongo.db
+                .skills-rows
+                  .skills-row.skills-row-Workflow
+                    h3.name__circle Workflow
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text Git
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text Gulp
+                    .circle__container
+                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+                      .skill__name-container
+                        h3.skill__name-text Bower
+      .map-footer-container
+          .contacts-container
+            .contacts-wrapper
+              .contact__name
+                .h2.contact__name-txt Контакты
+              .my__contacts
+                .link__contact
+                  .contact__icon
+                    svg.svg-icon.svg-icon_skype.contact__icons
+                          use(xlink:href='./assets/images/icons/sprite.svg#skype') 
+                  .contact__name Mihai Golub
+                .link__contact
+                  .contact__icon
+                    svg.svg-icon.svg-icon_gmail.contact__icons
+                          use(xlink:href='./assets/images/icons/sprite.svg#envelope2') 
+                  .contact__name mihai.golubov@gmail.com
+                .link__contact
+                  .contact__icon
+                    svg.svg-icon.svg-icon_phone.contact__icons
+                          use(xlink:href='./assets/images/icons/sprite.svg#phone2') 
+                  .contact__name +37360456742
+                .link__contact
+                  .contact__icon
+                    svg.svg-icon.svg-icon_marker.contact__icons
+                          use(xlink:href='./assets/images/icons/sprite.svg#map_marker') 
+                  .contact__name Mihai Golub
+          footer
+            .footer.footer-about
+              .footer-contacts
+                .footer-left-contacts
+                  ul.footer-link
+                    li
+                      a.footer__anchor(href="works.html") Мои работы
+                    li
+                      a.footer__anchor(href="about.html") Обо мне
+                    li
+                      a.footer__anchor(href="blog.html") Блог
+                    li
+                      a.footer__anchor(href="#") Авторизация
+                .footer-right-contacts
+                  .footer-socials
+                    .about-footer-socials
+                      a.svg__icon-footer(href="#")
+                        svg.svg-icon.svg-icon_vk
+                          use(xlink:href='./assets/images/icons/sprite.svg#vk')
+                      a.svg__icon-footer(href="#")
+                        svg.svg-icon.svg-icon_vk
+                          use(xlink:href='./assets/images/icons/sprite.svg#github')
+                      a.svg__icon-footer(href="#")
+                        svg.svg-icon.svg-icon_vk
+                          use(xlink:href='./assets/images/icons/sprite.svg#in')
+              .footer-copyright
+                .footer-copyright-left
+                  span.make__in Я веб-разработчик из Кишинева, и этот сайт я сделал,<br>в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer-copyright-right
+                  span.make__off © Голубов Михаил | создано с любовью в LoftSchool | 2019

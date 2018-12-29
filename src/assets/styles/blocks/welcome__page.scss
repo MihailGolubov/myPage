@@ -1,0 +1,186 @@
+.welcome__page{
+    width: 100%;
+    height: 100%;
+}
+.welcome-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.welcome__page-background{
+    position: absolute;
+    background-image: url(./assets/images/bg-img.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.welcome__my-picture-welcomePage{
+    margin-top: 40px;
+}
+.welcome-anchors{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.welcome-anchors-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    height: 395px;
+    background-color: #fcfcfc;
+    opacity: 0.85;
+    border-radius: 1%;
+}
+.welcome__my-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 141px;
+}
+.img-margine{
+    max-width: 100%;
+    height: 100%;
+    align-content: center;
+    border-radius: 50%;
+}
+.welcome__my-name{
+    text-align: center;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+}
+.welcome__my-proffesion{
+    text-align: center;
+    opacity: 0.8;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.welcome__my-socials{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.socials{
+    position: relative;
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+}
+
+.svg__icon-vk{
+    position: absolute;
+    width: 31px;
+    height: 17px;
+    fill: #70d1c6;
+    top: 3px;
+    left: -5px;
+}
+.svg__icon-vk:hover{
+    fill: #00bfa5;
+}
+.svg__icon-github{
+    width: 26px;
+    height: 22px;
+    fill: #70d1c6;
+}
+.svg__icon-github:hover{
+    fill: #00bfa5;
+}
+.svg__icon-in{
+    position: absolute;
+    top: -2.5px;
+    width: 24px;
+    height: 22px;
+    right: 0;
+    fill: #70d1c6;
+}
+.svg__icon-in:hover{
+    fill: #00bfa5;
+}
+
+.link-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.welcome__anchor-text{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+.works__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 45px;
+    background-color: #0bb29f;
+    border-radius: 4%;
+}
+.works__link:hover {
+    background-color: #078a82;
+  }
+  
+.about__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 45px;
+    background-color: #0bb29f;
+    border-radius: 4%;
+}
+.about__link:hover{
+    background-color: #078a82;
+}
+.blog__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px;
+    height: 45px;
+    background-color: #0bb29f;
+    border-radius: 4%;
+}
+.blog__link:hover{
+    background-color: #078a82;
+}
+
+.anchors-container{
+    width: 380px;
+    height: 395px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    background-color: #fcfcfc;
+    opacity: .85;
+    border-radius: 1%;
+}
+.welcome-name{
+    color: #455a64;
+}
+.welcome-profession{
+    color: #455a64;
+}

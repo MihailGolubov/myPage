@@ -1,0 +1,50 @@
+.circle-chart__circle {
+  animation: circle-chart-fill 4s reverse;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+.circle__container{
+  display: flex;
+  position: relative;
+  margin-right: 60px;
+}
+
+.skills-rows{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+.skills-row{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.name__circle{
+  position: absolute;
+  top: -42%;
+}
+h3.name__circle{
+  color: #455a64;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.skill__name-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h3.skill__name-text{
+  color: #00bfa5;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+}

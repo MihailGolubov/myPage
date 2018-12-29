@@ -1,0 +1,135 @@
+.navigation{
+position: absolute;
+right: 0;
+top: 0;
+width: auto;
+height: auto;
+}
+.navigation-container{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.navigation__closed{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.closed__icon{
+    display: flex;
+    width: 35px;
+    height: 5px;
+    border-radius: 20%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.navigation__closed::after{
+    content: "";
+    display: flex;
+    width: 35px;
+    height: 5px;
+    border-radius: 20%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.navigation__closed::before{
+    content: "";
+    display: flex;
+    width: 35px;
+    height: 5px;
+    border-radius: 20%;
+    background-color: #fff;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.navigation-open{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00bfa5;
+    opacity: 0.87;
+    z-index: 100;
+    align-items: center;
+    transition: 0.5s;
+    display: none;
+}
+.navigation-links{
+    text-align: center;
+    margin-bottom: 30vh; 
+}
+.navigation-open{
+    width: 100vw;
+    justify-content: center;
+}
+.links-text{
+    color: #fff;
+    font-family: bernier;
+    font-size: 63px;
+    font-weight: 400;
+    letter-spacing: 1.57px;
+}
+.navigation-anchor {
+    text-decoration: none;
+}
+.navigation-links__elem{
+    position: relative;
+}
+.navigation-links__elem::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: .2;
+    top: 50%;
+    right: -20%;
+}
+.navigation-links__elem::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: .2;
+    top: 50%;
+    left: -20%;
+}
+.link-elem--1::after{
+    right: -10%;
+}
+.link-elem--1::before{
+    left: -10%;
+}
+.link-elem--2::after{
+    right: 23%;
+}
+.link-elem--2::before{
+    left: 20%;
+}
+.link-elem--3::after{
+    right: 5%;
+}
+.link-elem--3::before{
+    left: 5%;
+}
+.link-elem--4::after{
+    right: -13%;
+}
+.link-elem--4::before{
+    left: -13%;
+}

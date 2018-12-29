@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./main.min.css")
+    title Document
+body
+  section
+    .welcome-page
+      .welcome-container
+        .page-background
+        .welcome-anchors
+          .anchors-container
+            .user
+              .user__photo
+                img.img-border(src="./assets/images/mefunn.jpg", alt="")
+              span.user__name.welcome-name Михаилу Голубов
+              span.user__profession.welcome-profession Личный сайт веб разработчика
+            .welcome__my-socials
+              .socials
+                .social.social-vk
+                  a.svg__vk(href="#")
+                    svg.svg__icon-vk
+                        use(xlink:href='./assets/images/icons/sprite.svg#vk')
+                .social.social-github
+                  a.svg__github(href="#")
+                    svg.svg__icon-github
+                        use(xlink:href='./assets/images/icons/sprite.svg#github')
+                .social.social-in
+                  a.svg__in(href="#")
+                    svg.svg__icon-in
+                        use(xlink:href='./assets/images/icons/sprite.svg#in')
+            .link-buttons
+              .works__link
+                a.welcome__anchor-text(href="works.html") Мои работы
+              .about__link
+                a.welcome__anchor-text(href="about.html") Обо мне
+              .blog__link
+                a.welcome__anchor-text(href="blog.html") Блог

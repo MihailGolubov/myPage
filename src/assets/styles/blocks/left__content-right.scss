@@ -1,0 +1,21 @@
+.right-column{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.column-info{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info__content-picture{
+    display: block;
+    width: 100%;
+}
+.my__info-picture{
+    width: 100%;
+    height: 390px;
+    border-radius: 2%;
+}

@@ -1,0 +1,137 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.blog-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name__prefix-accordeon::after{
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 3px;
+    height: 42px;
+    background-color: #00bfa5;
+}
+.blog-wrapper{
+    position: relative;
+}
+.content-section{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.blog-container{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 95%;
+    overflow: hidden;
+}
+.column-left{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+}
+.column-right{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+}
+.left-elem,
+.left-elem__text
+{
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    height: 43px;
+    align-items: center;
+}
+.left-elem__text{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.left-elem__text:hover{
+    font-weight: 700;
+    color: #00bfa5;
+}
+.left-elem{
+    position: relative;
+    margin: 10px 0;
+}
+.left-elem::after{
+    content: "";
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    right: -10px;
+    width: 3px;
+    height: 42px;
+    background-color: #00bfa5;
+    transition: all 1s;
+}
+.left-elem:hover:after{
+    opacity: 1;
+}
+.content__name{
+    color: #455a64;
+    font-family: bernier;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+}
+.content__date{
+    opacity: 0.7;
+    color: #00bfa5;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 41px;
+}
+.right-content__description{
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.right-content__name,
+.right-content__date,
+.right-content__description,
+.right-content__img
+{
+    margin: 5px 0;
+}
+.right-elements{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.right-elements--line::after{
+    content: "";
+    display: flex;
+    bottom: -20px;
+    width: 681px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: 0.07;
+    margin: 40px 0;
+}
+.button-blog{
+    display: none;
+}

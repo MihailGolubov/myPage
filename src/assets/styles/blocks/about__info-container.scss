@@ -1,0 +1,29 @@
+.about__info-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.about__img-container{
+    width: 100%;
+    height: 390px;
+    background-image: url(./assets/images/mefunn.jpg);
+    background-size: cover;
+}
+.about__h1-text{
+    color: #373e42;
+    font-family: bernier;
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 1.57px;
+}
+h1.about__h1-text{
+    font-family: bernier;
+    color: #373e42;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+}

@@ -1,0 +1,24 @@
+.footer-copyright-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+    margin-right: 50px;
+}
+.footer-copyright-left{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 40px;
+}
+.make__in .make__off{
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23.97px;
+}
