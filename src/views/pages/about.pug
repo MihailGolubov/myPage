@@ -5,6 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./main.min.css")
+    script(src='./about.bundle.js')
     title Document
 body
     .about-wrapper
@@ -15,21 +16,22 @@ body
                 img.img-border(src="./assets/images/mefunn.jpg", alt="")
               span.user__name Михаил Голубов
               span.user__profession Личный сайт веб разработчика
+          .page-background
           .navigation
               .navigation-container
-                .navigation__closed
+                .navigation__closed#ClosedMenu
                   a.closed__icon(href="#")
-                .navigation-open
+                .navigation-open#OpenMenu
                   .navigation-links
                     ul.navigation-links__wrapper
                       li.navigation-links__elem.link-elem--1
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="works.html")
                           p.links-text Мои работы
                       li.navigation-links__elem.link-elem--2
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="blog.html")
                           p.links-text Блог
                       li.navigation-links__elem.link-elem--3
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="about.html")
                           p.links-text Обо мне
                       li.navigation-links__elem.link-elem--4
                         a.navigation-anchor(href="#")

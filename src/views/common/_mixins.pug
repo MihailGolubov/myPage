@@ -4,3 +4,26 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+
+  // Media queries max-width
+@mixin mediaMax($max-width: 1200px) {
+    @media (max-width: $max-width) {
+        @content
+    }
+}
+
+// Media queries min-width
+@mixin media($min-width: 1200px) {
+    @media (min-width: $min-width) {
+        @content
+    }
+}
+
+// Media queries mix
+@mixin mediaMix($min-width: 768px,
+$max-width: 1200px) {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content
+    }
+}

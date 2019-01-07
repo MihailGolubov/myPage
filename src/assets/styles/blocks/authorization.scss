@@ -1,0 +1,32 @@
+.auth-buttons{
+    position: absolute;
+    z-index: 5;
+    top: 30px;
+    right: 30px;
+    @media (min-width: 320px) and (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    right: auto;
+    top: 8%;
+    }
+}
+
+.authorization-button{
+    width: 180px;
+    height: 45px;
+    border: 1px solid #ffffff;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    border-radius: 4%;
+}
+.authorization-button{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36.12px;
+}

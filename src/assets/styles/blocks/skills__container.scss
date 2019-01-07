@@ -29,6 +29,9 @@
 }
 .skills-container{
     height: 70%;
+    @media (min-width: 320px) and (max-width: 768px) {
+        height: 100%;
+    }
 }
 .skill__percent-circle::before{
     content: "";

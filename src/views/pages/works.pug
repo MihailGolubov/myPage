@@ -5,11 +5,33 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./main.min.css")
+    script(src='./works.bundle.js')
     title Document
 body
       section.works
         .page-works
           header.header.header--works
+            .parallax#parallax
+              .parallax-element.parallax-element--1
+                img.parallax-photo(src="/assets/images/Layer_5.png", alt="photo")
+              .parallax-element.parallax-element--2
+                img.parallax-photo(src="/assets/images/Layer_8.png", alt="photo")
+              .parallax-element.parallax-element--3
+                img.parallax-photo(src="/assets/images/Layer_7.png", alt="photo")
+              .parallax-element.parallax-element--4
+                img.parallax-photo.parallax-photo4(src="/assets/images/cloud_PNG4.png", alt="photo")
+              .parallax-element.parallax-element--5
+                img.parallax-photo.parallax-photo5(src="/assets/images/Layer_6.png", alt="photo")
+              .parallax-element.parallax-element--6
+                img.parallax-photo.parallax-photo6(src="/assets/images/Layer_4.png", alt="photo")
+              .parallax-element.parallax-element--7
+                img.parallax-photo.parallax-photo7(src="/assets/images/sky.png", alt="photo")
+              .parallax-element.parallax-element--8
+                img.parallax-photo.parallax-photo8(src="/assets/images/Layer_2.png", alt="photo")
+              .parallax-element.parallax-element--9
+                img.parallax-photo.parallax-photo9(src="/assets/images/Layer_1.png", alt="photo")
+              .parallax-element.parallax-element--10
+                img.parallax-photo.parallax-photo10(src="/assets/images/cloud_PNG5.png", alt="photo")
             .user-wrap
               .user
                 .user__photo
@@ -18,19 +40,19 @@ body
                 span.user__profession Личный сайт веб разработчика
             .navigation
               .navigation-container
-                .navigation__closed
+                .navigation__closed#ClosedMenu
                   a.closed__icon(href="#")
-                .navigation-open
+                .navigation-open#OpenMenu
                   .navigation-links
                     ul.navigation-links__wrapper
                       li.navigation-links__elem.link-elem--1
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="works.html")
                           p.links-text Мои работы
                       li.navigation-links__elem.link-elem--2
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="blog.html")
                           p.links-text Блог
                       li.navigation-links__elem.link-elem--3
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="about.html")
                           p.links-text Обо мне
                       li.navigation-links__elem.link-elem--4
                         a.navigation-anchor(href="#")
@@ -54,48 +76,44 @@ body
                     svg.svg__icon-in
                       use(xlink:href='./assets/images/icons/sprite.svg#in')
         .works__content
-          .works__content-container
+          .works-wrapper
             .works__name-container
               h1.works__name-txt Мои работы
-            .works__content-left
-              .about__project
-                .about__project-container
-                  .about__project-name
-                    h2.project-name__wrapper Сайт школы онлайн<br>образования
-                  .about__project-tehnologies
-                    h3.project-tehnologies-text HTML, CSS, JAVASCRIPT
-                  .about__project-link
-                    button.works__projects-links(href="#")
-                      span
-                        svg.svg__icon-link
-                          use(xlink:href='./assets/images/icons/sprite.svg#link')
-                      span.projects-links-text Посмотреть сайт
-            .works__content-right
-              .works__slider.works__slider-active
-                .screen__container
-                  .site__screen-slider
-                    img(src="./assets/images/sliderBg.png", alt="")
-              .inactive__slider-background
-              .works__slider-inactive
-                .works__sliders
-                  .site__screen-slider
-                    img(src="./assets/images/works__slider1.png", alt="")
-                .works__sliders
-                  .site__screen-slider
-                    img(src="./assets/images/works__slider2.png", alt="")
-              .works__slider-arrows
-                .slider__arow-up
-                  a.svg__arrow-slider(href="#")
-                    svg.svg__arow-down
-                      use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-                .slider__arrow-up
-                  a.svg__arrow-slider(href="#aboutContent")
-                    svg.svg__arow-up
-                      use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
+            .slider-container
+              .slider-actives
+                .active-container
+                  img.active-slider(src="./assets/images/sliderBg.png", alt="photo")
+              .slider-description
+                .slider__name
+                  p.slider-name__text Сайт школы онлайн<br>образования
+                .project-tehnologies
+                  p.tehnologies-text HTML,CSS,JavaScript
+                .about__project-link
+                  button.works__projects-links(href="#")
+                    span.button-works
+                      svg.svg__icon-link
+                        use(xlink:href='./assets/images/icons/sprite.svg#link')
+                          span.projects-links-text Посмотреть сайт
+              .slider-inactive
+                .screen-projects
+                  .screen-slider__first
+                    img.inactive-first(src="./assets/images/works__slider1.png", alt="photo")
+                  .screen-slider__second
+                    img.inactive-second(src="./assets/images/works__slider2.png", alt="photo")
+                  .screen-background
+                  .works__slider-arrows
+                    .slider__arow-up
+                      a.svg__arrow-slider(href="#")
+                        svg.svg__arow-down
+                          use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
+                    .slider__arrow-up
+                      a.svg__arrow-slider(href="#aboutContent")
+                        svg.svg__arow-up
+                          use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
         .comment__section
           .comment__container
             .comment__container-name
-              .coment__name-txt Что обо мне говорят
+              .coment__name-txt Что обо мне<br>говорят
             .comment__people
               .comment__people-container
                 .comment__people-symbol
@@ -120,11 +138,11 @@ body
                 .form.form__contact
                   .name__form
                     .name__form-text Связаться со мной
-                label(for="")
+                label.label-form(for="")
                   input(type='text', name='name', placeholder='  Имя')
-                label(for="")
+                label.label-form(for="")
                   input(type='text', name='email', placeholder='  Email')
-                label(for="")
+                label.label-form(for="")
                   textarea#textareaMessage(placeholder='  Ваше сообщение')
                 .form__buttons
                   button.form__send Отправить
@@ -133,8 +151,7 @@ body
                   a.svg__arrow-slider(href="works.html")
                     svg.svg__arow-up
                       use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-        footer
-          footer.footer.footer--works
+        .footer.footer--works
             .footer-contacts
               .footer-left-contacts
                 ul.footer-link

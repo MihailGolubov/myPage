@@ -17,3 +17,18 @@
     width: 100vw;
     height: 100vh;
 }
+.hero-copyright{
+    position: absolute;
+    z-index: 5;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hero-copyright__text{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+}
