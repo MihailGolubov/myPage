@@ -1,0 +1,17 @@
+script(type="text/x-template")#skills-list
+  ul.skills-list
+    li.skills-list__item test
+
+script(type="text/x-template")#skills-item
+  .skills-row
+    .skills-row__title Frontend
+  ul.skills-row__list
+    li.skills-list__item
+
+script(type="text/x-template")#skill
+  .skill
+    .skill__circles
+      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
+        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
+        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
+      .skill__title #{skill}
