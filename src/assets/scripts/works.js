@@ -4,17 +4,18 @@ window.onload=function(){
         closed.addEventListener('click', function ()  {
             opened.classList.toggle('navigation-open--opened');
         });
+        closed.addEventListener('click', function(){
+            closed.classList.toggle('is-active');
+        });
+    
     const textList = document.getElementById('textItems');
         closed.addEventListener('click', function() {
             textList.classList.toggle('text-opacity');
         })
-  }
 
-
-const   parallaxContainer = document.querySelector('.parallax');
-const   layers = Array.from(parallaxContainer.children);
-
-const moveLayers = e => {
+    const parallaxContainer = document.querySelector('.parallax');
+    const layers = Array.from(parallaxContainer.children);
+    const moveLayers = e => {
     const initialX = (window.innerWidth / 2) - e.pageX;
     const initialY = (window.innerHeight / 2) - e.pageY;
     
@@ -27,4 +28,6 @@ const moveLayers = e => {
     });
 }
 
-window.addEventListener('mousemove', moveLayers)
+window.addEventListener('mousemove', moveLayers);
+  }
+

@@ -16,7 +16,7 @@ body
             .user
               .user__photo
                 img.img-border(src="./assets/images/mefunn.jpg", alt="")
-              span.user__name.welcome-name Михаилу Голубов
+              span.user__name.welcome-name Михаил Голубов
               span.user__profession.welcome-profession Личный сайт веб разработчика
             .welcome__my-socials
               .socials
@@ -39,7 +39,35 @@ body
                 a.welcome__anchor-text(href="about.html") Обо мне
               .blog__link
                 a.welcome__anchor-text(href="blog.html") Блог
+        .login-container
+          .login-form
+            .form-name
+            span.name-txt Авторизуйтесь
+            label.form-input.form-input-login(for="")
+              span.form-icons.form-icons--login
+              input(type='text', name='input-login', placeholder='  Логин')
+            label.form-input.form-input-password(for="")
+              .form-icons.form-icons--password
+              input(type='text', name='input-password', placeholder='  Пароль')
+            label.check-human(for="")
+              span.check-text Я человек
+              input(type="checkbox" name="checkbox-test")#checkHuman
+              span.check-custom
+            .checks-text Вы точно не робот?
+            .form-checks
+              label.human-yes(for="")
+                input(type="radio", name='yes-human')#checkedYes
+                span.radio-yes
+                span.radio-text Да
+              label.human-no(for="")
+                input(type="radio", name='no-human')#checkedNo
+                span.radio-no
+                span.radio-text Не уверен
+            .login-buttons
+              button.anchor-home На Главную
+              button.anchor-log Войти
+
         .hero-copyright
-          span.hero-copyright__text Голубов Михаил | создано с льюбовью в Lofschol | 2019
+          span.hero-copyright__text Голубов Михаил | создано с любовью в Lofschol | 2019
         .auth-buttons
           button.authorization-button Авторизоваться

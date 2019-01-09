@@ -8,4 +8,7 @@ window.onload=function(){
         closed.addEventListener('click', function() {
             textList.classList.toggle('text-opacity');
         })
+        closed.addEventListener('click', function(){
+            closed.classList.toggle('is-active');
+        });
   }

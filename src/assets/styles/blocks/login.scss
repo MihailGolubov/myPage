@@ -1,0 +1,160 @@
+.login-container{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 30;
+    width: auto;
+    height: auto;
+}
+
+.login-form{
+    background-color: #fcfcfc;
+    opacity: 0.85;
+    width: 380px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-icons{
+    width: 45px;
+    height: 45px;
+    background-color: #f0efe9;
+}
+.form-input{
+    display: flex;
+    justify-content: center;
+}
+.check-human{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+.check-human{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.check-custom{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #00bfa5;
+    position: relative;
+}
+#checkHuman{
+    position: absolute;
+    left: -2px;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    z-index: 2;
+    opacity: 0;
+}
+.checkbox{
+    height: 100%;
+}
+.check-custom::after{
+    content: "a";
+    position: absolute;
+    display: flex;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    opacity: 0;
+}
+
+#checkHuman:checked + .check-custom::after{
+    opacity: 1;
+}
+
+.form-checks{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.human-yes{
+    display: flex;
+    position: relative;
+}
+.human-yes::before{
+    content: "";
+    display: flex;
+    left: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+#checkedYes{
+    display: none;
+}
+.human-no{
+    display: flex;
+    position: relative;
+}
+.human-no::before{
+    content: "";
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+.human-no::after{
+    content: "";
+    position: absolute;
+    top: 34%;
+    left: 6%;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #00bfa5;
+    opacity: 1;
+}
+.no-human:checked + .human-no::after{
+    opacity: 1;
+}
+#checkedNo{
+    position: absolute;
+    z-index: 3;
+    left: 4%;
+    top: 23%;
+    opacity: 0;
+}
+.radio-text{
+    margin-left: 20px;
+}
+
+.login-buttons{
+    display: flex;
+    width: 98%;
+    height: 45px;
+    justify-content: space-between;
+}
+.anchor-home,
+.anchor-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49.5%;
+    height: 99%;
+    border-radius: 4%;
+    background-color: #00bfa5;
+}
+.anchor-home,
+.anchor-log{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+}

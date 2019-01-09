@@ -170,8 +170,8 @@ footer.footer__works{
 
 .comment__section{
     position: relative;
+    height: 120vh;
     width: 100vw;
-    height: -webkit-fill-available;
     @media (min-width: 320px) and (max-width: 768px) {
         height: auto;
         width: auto;

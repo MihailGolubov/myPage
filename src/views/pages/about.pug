@@ -19,8 +19,9 @@ body
           .page-background
           .navigation
               .navigation-container
-                .navigation__closed#ClosedMenu
-                  a.closed__icon(href="#")
+                button.hamburger.hamburger--collapse#ClosedMenu(type='button')
+                  span.hamburger-box
+                    span.hamburger-inner
                 .navigation-open#OpenMenu
                   .navigation-links
                     ul.navigation-links__wrapper
