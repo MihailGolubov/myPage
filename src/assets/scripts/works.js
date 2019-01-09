@@ -11,10 +11,10 @@ window.onload=function(){
     const textList = document.getElementById('textItems');
         closed.addEventListener('click', function() {
             textList.classList.toggle('text-opacity');
-        })
+        });
 
     const parallaxContainer = document.querySelector('.parallax');
-    const layers = Array.from(parallaxContainer.children);
+    const layers = Array.from(parallaxContainer.chilldren);
     const moveLayers = e => {
     const initialX = (window.innerWidth / 2) - e.pageX;
     const initialY = (window.innerHeight / 2) - e.pageY;

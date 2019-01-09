@@ -1,76 +1,25 @@
 .parallax{
-    position: relative;
-    width: 100vw;
-    height: 105vh;
-}
-.parallax-element{
     position: absolute;
-    width: auto;
-    height: 100%;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%)
-}
-.parallax-photo{
-    height: auto;
-    width: fit-content;
-}
-.parallax-element--1{
-    z-index: 1;
     top: 0;
-}
-.parallax-element--2{
-    z-index: 2;
-}
-.parallax-element--3{
-    z-index: 3;
-}
-.parallax-element--4{
-    z-index: 4;
+    left: -5vw;
+    width: 110vw;
     height: auto;
-    left: 90%;
-    top: 10%;
+
 }
-.parallax-photo4{
-    width: 400px;
-    height: auto;
-}
-.parallax-element--5{
-    z-index: 5;
-    left: 50%;
-    top: -8%;
-}
-.parallax-element--6{
-    z-index: 6;
-    top: 15%;
-    left: 50%;
-}
-.parallax-element--7{
-    z-index: 7;
-    top: 31%;
-}
-.parallax-photo7{
-    width: 70%;
-}
-.parallax-element--8{
-    z-index: 8;
-    top: 47%;
-    left: 28%;
-    width: fit-content;
-}
-.parallax-photo8{
-    width: 60%;
-}
-.parallax-element--9{
-    z-index: 9;
-    top: 6%;
-    left: 50%;
-}
-.parallax-element--10{
-    top: 54%;
-    z-index: 10;
-    left: 26%;
-}
-.parallax-photo10{
+
+.parallax-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: auto;
+}
+.parallax__layer-img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10vh;
+}
+.img-modify1{
+    top: 0 !important;
 }

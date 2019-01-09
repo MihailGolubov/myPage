@@ -29,27 +29,32 @@
 .form-input{
     display: flex;
     justify-content: center;
+    width: 90%;
 }
 .check-human{
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
+    width: 40%;
+    justify-content: space-evenly;
 }
 .check-human{
     display: flex;
     flex-direction: row-reverse;
 }
 .check-custom{
-    display: flex;
     width: 20px;
     height: 20px;
     background-color: #00bfa5;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #checkHuman{
     position: absolute;
-    left: -2px;
+    left: 10%;
     bottom: 50%;
     transform: translate(50%,50%);
     z-index: 2;
@@ -58,18 +63,13 @@
 .checkbox{
     height: 100%;
 }
-.check-custom::after{
-    content: "a";
-    position: absolute;
-    display: flex;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%,50%);
-    opacity: 0;
+
+#checkHuman:checked + .check-custom .svg-checkbox{
+    display: block;
 }
 
-#checkHuman:checked + .check-custom::after{
-    opacity: 1;
+.svg-checkbox{
+    display: none;
 }
 
 .form-checks{
@@ -94,9 +94,15 @@
     border-radius: 50%;
 }
 #checkedYes{
-    display: none;
+    z-index: 2;
+    position: absolute;
+    left: 26%;
+    top: 25%;
+    opacity: 0;
 }
-.human-no{
+
+.human-no,
+.radio-yes{
     display: flex;
     position: relative;
 }
@@ -108,20 +114,6 @@
     border: 1px solid #cccccc;
     background-color: #ffffff;
     border-radius: 50%;
-}
-.human-no::after{
-    content: "";
-    position: absolute;
-    top: 34%;
-    left: 6%;
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: #00bfa5;
-    opacity: 1;
-}
-.no-human:checked + .human-no::after{
-    opacity: 1;
 }
 #checkedNo{
     position: absolute;
@@ -157,4 +149,112 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 36px;
+}
+.form-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svg__icon-form{
+    width: 15px;
+    height: 17px;
+    fill: #c4cbcd;
+}
+
+.input-login,
+.input-password{
+    width: 100%;
+}
+.radio-yes{
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 27%;
+    top: 27%;
+    background-color: #00bfa5;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+#checkedYes:checked + .radio-yes {
+    z-index: 4;
+    opacity: 1;
+}
+.radio-no {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    background-color: #00bfa5;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0;
+}
+#checkedNo:checked + .radio-no {
+    z-index: 4;
+    opacity: 1;
+}
+.name-txt{
+    color: #455a64;
+    font-family: bernier;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+}
+.name-txt{
+    position: relative;
+    width: auto;
+    display: inline-block;
+}
+.name-txt::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: 0.2;
+    top: 50%;
+    left: -22%;
+    transform: translateX(50%);
+}
+.name-txt::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: 0.2;
+    top: 50%;
+    right: -10%;
+    transform: translateX(50%);
+}
+
+.check-text{
+    opacity: 0.8;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.checks-text{
+    opacity: 0.8;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23.97px;
+}
+.radio-text{
+    opacity: 0.8;
+    color: #455a64;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.97px;
 }
