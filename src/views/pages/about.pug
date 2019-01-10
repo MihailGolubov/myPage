@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="./main.min.css")
-    script(src='./about.bundle.js')
-    title Document
-body
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+
+block scripts
+  script(src='about.bundle.js')
+block content
     .about-wrapper
       header.header
           .user-wrap
@@ -79,8 +77,8 @@ body
               .my__utility-container
                 h1.content__my-utility Чем я могу быть<br>вам полезен
               .my__utility__details Больше всего меня привлекет Frontend разработка,но я также знаком и могу решать не сложные задачи на Backend.Но давай по порядку.
-              .skils-container
-                include ./../components/entry.pug
+              .about__right-content
+              #skills-component
       .map-footer-container
           .contacts-container
             .contacts-wrapper
@@ -137,3 +135,6 @@ body
                   span.make__in Я веб-разработчик из Кишинева, и этот сайт я сделал,<br>в рамках обучения в Школе онлайн образования LoftSchool. 
                 .footer-copyright-right
                   span.make__off © Голубов Михаил | создано с любовью в LoftSchool | 2019
+    
+    block scripts
+      script(src='./about.bundle.js')

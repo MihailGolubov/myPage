@@ -1,3 +1,5 @@
+import "./modules/skills"
+
 window.onload=function(){
     const closed = document.getElementById('ClosedMenu');
     const opened = document.getElementById('OpenMenu');
@@ -12,3 +14,4 @@ window.onload=function(){
             closed.classList.toggle('is-active');
         });
   }
+
