@@ -1,19 +1,25 @@
 script(type="text/x-template")#skills-list
-    .div
-        ul.skills-list
-            li.skills-list__item test
+  ul.skills-list
+    li.skills-list__item(v-for="skillsGroupObj in skills")
+      skills-row(
+          :skillsGroupObj="skillsGroupObj"
+      )
 
 
-script(type="text/x-template")#skills-list__item
+script(type="text/x-template")#skills-item
   .skllls-row
-    .skills-list__title
+    .skills-list__title {{skillsGroupObj.skillsGroup}}
     ul.skills
-      li.skills-list__item
+      li.skills-list__item(v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills")
+        skill(
+          :skillPersentage="skillPercentage"
+          :skillTitle="skillTitle"
+        )
 
 
 script(type="text/x-template")#skill
   .skill
     svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
       circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-      circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-    .skill__title
+      circle(cx="50" cy="50" r="40" ref="circle").skill__circle.skill__circle_above
+    .skill__title {{skillTitle}}
