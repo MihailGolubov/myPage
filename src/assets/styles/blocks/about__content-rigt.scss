@@ -3,6 +3,7 @@
     justify-content: center;
     width: 50%;
     height: 100vh;
+    z-index: 50;
     background-color: #eeebdf;
     @media (min-width: 768px) and (max-width: 1200px) {
         width: 100%;
@@ -45,6 +46,9 @@
     font-size: 35px;
     font-weight: 400;
     line-height: 41px;
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 21px;
+    }
 }
 .my__utility-container::after{
     content: "";

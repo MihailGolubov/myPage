@@ -81,6 +81,9 @@
         line-height: 52px;
         letter-spacing: 1.22px;
     }
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 21px;
+    }
 }
 .content__left-txt::before{
     content: "";
@@ -92,6 +95,9 @@
     opacity: .2;
     right: -25%;
     top: 64%;
+    @media (min-width: 320px) and (max-width: 768px) {
+        right: -40%;
+    }
 }
 .content__left-txt::after{
     content: "";
@@ -103,6 +109,9 @@
     opacity: .2;
     left: -25%;
     top: 64%;
+    @media (min-width: 320px) and (max-width: 768px) {
+        left: -40%;
+    }
 }
 .about__me-details{
     color: #455a64;

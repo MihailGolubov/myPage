@@ -12,7 +12,7 @@ script(type="text/x-template")#skills-item
     ul.skills
       li.skills-list__item(v-for="(skillPercentage, skillTitle) in skillsGroupObj.skills")
         skill(
-          :skillPersentage="skillPercentage"
+          :skillPercentage="skillPercentage"
           :skillTitle="skillTitle"
         )
 
@@ -20,6 +20,6 @@ script(type="text/x-template")#skills-item
 script(type="text/x-template")#skill
   .skill
     svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-      circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-      circle(cx="50" cy="50" r="40" ref="circle").skill__circle.skill__circle_above
+      circle(cx="50" cy="50" r="50").skill__circle.skill__circle_under
+      circle(cx="50" cy="50" r="57" ref="circle").skill__circle.skill__circle_above
     .skill__title {{skillTitle}}

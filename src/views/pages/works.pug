@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="./main.min.css")
-    script(src='./works.bundle.js')
-    title Document
-body
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои Работы'
+  
+
+block scripts
+  script(src='works.bundle.js')
+  
+block content
       section.works
         .page-works
           .parallax
             .parallax-layer
               img.parallax__layer-img.img-modify1(src="./assets/images/layer-1.png", alt="")
             .parallax-layer
-              img.parallax__layer-img(src="./assets/images/layer-2.png", alt="")
+              img.parallax__layer-img.img-modify2(src="./assets/images/layer-2.png", alt="")
             .parallax-layer
               img.parallax__layer-img(src="./assets/images/layer-3.png", alt="")
             .parallax-layer
               img.parallax__layer-img(src="./assets/images/layer-4.png", alt="")
             .parallax-layer
-              img.parallax__layer-img(src="./assets/images/layer-5.png", alt="")
+              img.parallax__layer-img.img-modify5(src="./assets/images/layer-5.png", alt="")
             .parallax-layer
               img.parallax__layer-img(src="./assets/images/layer-6.png", alt="")
             .parallax-layer
@@ -81,36 +81,7 @@ body
             .works__name-container
               h1.works__name-txt Мои работы
             .slider-container
-              .slider-actives
-                .active-container
-                  img.active-slider(src="./assets/images/sliderBg.png", alt="photo")
-              .slider-description
-                .slider__name
-                  p.slider-name__text Сайт школы онлайн<br>образования
-                .project-tehnologies
-                  p.tehnologies-text HTML,CSS,JavaScript
-                .about__project-link
-                  button.works__projects-links(href="#")
-                    span.button-works
-                      svg.svg__icon-link
-                        use(xlink:href='./assets/images/icons/sprite.svg#link')
-                          span.projects-links-text Посмотреть сайт
-              .slider-inactive
-                .screen-projects
-                  .screen-slider__first
-                    img.inactive-first(src="./assets/images/works__slider1.png", alt="photo")
-                  .screen-slider__second
-                    img.inactive-second(src="./assets/images/works__slider2.png", alt="photo")
-                  .screen-background
-                  .works__slider-arrows
-                    .slider__arow-up
-                      a.svg__arrow-slider(href="#")
-                        svg.svg__arow-down
-                          use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-                    .slider__arrow-up
-                      a.svg__arrow-slider(href="#aboutContent")
-                        svg.svg__arow-up
-                          use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
+              #slider-component
         .comment__section
           .comment__container
             .comment__container-name

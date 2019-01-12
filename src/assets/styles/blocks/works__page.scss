@@ -3,7 +3,6 @@
 }
 .works{
     position: relative;
-    overflow: hidden;
 }
 .page-works{
     position: relative;
@@ -172,6 +171,7 @@ footer.footer__works{
     position: relative;
     height: 120vh;
     width: 100vw;
+    background-color: azure;
     @media (min-width: 320px) and (max-width: 768px) {
         height: auto;
         width: auto;
@@ -470,22 +470,18 @@ input[name=name] {
     z-index: -5;
 }
 
-.svg__arow-up{
-    width: 26px;
-    height: 16px;
-    opacity: 0.7;
-    fill: #fff;
-    transform: rotate(180deg)
-}
 .label-form{
     @media (min-width: 320px) and (max-width: 768px) {
         display: flex;
         width: 95%;
     }
 }
-
+.svg__arow-up{
+    width: 26px;
+    height: 16px;
+    opacity: 0.7;
+}
 .slider__arow-up{
-    @media (min-width: 320px) and (max-width: 768px) {
-        margin-bottom: 40px;
-    }    
+    margin-bottom: 30px;
+    transform: rotate(180deg);
 }

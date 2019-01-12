@@ -1,25 +1,37 @@
 .parallax{
-    position: absolute;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     top: 0;
-    left: -5vw;
-    width: 110vw;
-    height: auto;
-
 }
 
 .parallax-layer{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
+    width: 110%;
+    height: 110%;
 }
 .parallax__layer-img{
     position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    top: 10vh;
+    height: inherit;
 }
 .img-modify1{
-    top: 0 !important;
+    min-width: max-content;
+}
+.img-modify2{
+    width: max-content;
+}
+.img-modify5{
+    width: auto;
+}
+.img-modify8{
+    bottom: -22%;
+}
+.parallax--blog{
+    z-index: -10;
 }
