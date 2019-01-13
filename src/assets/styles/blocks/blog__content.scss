@@ -28,6 +28,9 @@ body{
 }
 .blog-wrapper{
     position: relative;
+    @media (min-width: 320px) and (max-width: 1200px) {
+        overflow: hidden;
+    }
 }
 .content-section{
     width: 100vw;

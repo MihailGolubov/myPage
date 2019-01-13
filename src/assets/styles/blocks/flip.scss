@@ -1,0 +1,66 @@
+.welcome-anchors{
+    display: flex;
+    opacity: 1;
+}
+.flip-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flip-container{
+    display: flex;
+    width: 380px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    justify-content: center;
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 300px;
+        }
+}
+.login-container{
+    width: 380px;
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 300px;
+        }
+}
+.login-container{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    opacity: 1;
+}
+.login-container.active{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    opacity: 1;
+}
+.welcome-anchors{
+    transform: rotateY(-180deg);
+}
+
+.welcome-anchors{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    opacity: 1;
+}
+
+.login-container{
+    margin-left: -100%;
+}
+.login-container{
+    opacity: 1;
+    backface-visibility: hidden;
+}
+.welcome-anchors{
+    backface-visibility: hidden;
+}
+
+.welcome-anchors.active {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    opacity: 1;
+}
