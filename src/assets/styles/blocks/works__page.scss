@@ -276,6 +276,12 @@ footer.footer__works{
         width: 100%;
     }
 }
+#textareaMessage{
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 95% !important;
+
+    }
+}
 .comment__people-picture{
     display: flex;
     width: 77px;
@@ -353,7 +359,6 @@ footer.footer__works{
     justify-content: space-around;
     width: 380px;
     height: 437px;
-    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 2%;
     @media (min-width: 320px) and (max-width: 768px) {
         width: 300px;

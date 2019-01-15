@@ -9,3 +9,20 @@
 .works{
     overflow: hidden;
 }
+
+.b-works-form__blur{
+    z-index: -1;
+    position: absolute;
+    background-image: url(assets/images/bg-comment.png);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    background-position: bottom;
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: auto auto;
+}

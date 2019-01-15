@@ -82,8 +82,8 @@ block content
               h1.works__name-txt Мои работы
             .slider-container
               #slider-component
-        .comment__section
-          .comment__container
+        .comment__section#commentSection
+          .comment__container#commentContainer
             .comment__container-name
               .coment__name-txt Что обо мне<br>говорят
             .comment__people
@@ -105,19 +105,22 @@ block content
                   .people__date
                     .people__name Сабанцев Владимир
                     .people__works преподаватель
-            .contact__me-form
-                .form__bg
+            .contact__me-form#contactMeForm
+                .b-works-form__blur
                 .form.form__contact
                   .name__form
                     .name__form-text Связаться со мной
                 label.label-form(for="")
-                  input(type='text', name='name', placeholder='  Имя')
+                  input(type='text', name='name',required, placeholder='  Имя')
+                  .error
                 label.label-form(for="")
-                  input(type='text', name='email', placeholder='  Email')
+                  input(name='email', required='', type='email', placeholder='  Email')
                 label.label-form(for="")
-                  textarea#textareaMessage(placeholder='  Ваше сообщение')
+                .error
+                textarea#textareaMessage(name='message',required='', placeholder='  Ваше сообщение')
+                .error
                 .form__buttons
-                  button.form__send Отправить
+                  button.form__send#sendContactMe Отправить
                   button.form__clear Очистить
             .slider__arow-up
                   a.svg__arrow-slider(href="works.html")
