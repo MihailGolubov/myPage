@@ -73,9 +73,9 @@ block content
                     svg.svg__icon-in
                       use(xlink:href='./assets/images/icons/sprite.svg#in')
       .content-section
-        .blog-container
-          .column.column-left
-            button.button-blog
+        .blog-container#blogContainer
+          .column.column-left#leftElem
+            button.button-blog#blogButton
             .left-elem.left-elem--active
               .left-elem__text
                 a.blog-anchor(href="#blogElem1") Самое важное в SASS
@@ -88,7 +88,7 @@ block content
             .left-elem
               .left-elem__text
                 a.blog-anchor(href="#blogElem4") Почему я выбрал Jade
-          .column.column-right
+          .column.column-right#rightElem
             .right-elements#blogElem1
               .right-content__name
                 span.content__name Самое важное в SASS

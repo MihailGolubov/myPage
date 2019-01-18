@@ -1,7 +1,7 @@
 
 const container = document.querySelector('.comment__section');
 const sectionEl = document.querySelector('.contact__me-form');
-const blurEl = document.createElement('.b-works-form__blur');
+const blurEl = document.querySelector('.b-works-form__blur');
 
 let drawBlur = function () {
   const width = sectionEl.offsetWidth;

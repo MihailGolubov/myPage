@@ -1,41 +1,23 @@
-
-const contactMe = document.querySelector('#contactMeForm');
+const form = document.getElementsByTagName('form');
 const sendContactMe = document.querySelector('#sendContactMe');
+const name = document.querySelector('input[name="name"]');
+const email = document.querySelector('input[name="email"]');
+const message = document.querySelector('textarea[name="message"]');
+const nameValue = name.value;
+const emailValue = email.value;
+const messageValue = message.value;
 
-sendContactMe.addEventListener('click', event => {
-    event.preventDefault();
 
-    if (validateForm(contactMe)) {
-        console.log('все ок');
+sendContactMe.addEventListener('click', function (event) {
+      if(name.value != 0 && email.value !=0 && message.value !=0){
+        const data = {
+            name: name.value,
+            email: email.value,
+            message: message.value
+      }
+      const xhr = new XMLHttpRequest();
+      xhr.responseType = 'json';
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.send(JSON.stringify(data));
     }
-
-});
-
-function validateForm(form) {
-    let valid = true;
-
-    if (!validateField(form.elements.name)) {
-        valid = false;
-    }
-
-    if (!validateField(form.elements.email)) {
-        valid = false;
-    }
-
-    if (!validateField(form.elements.message)) {
-        valid = false;
-    }
-    return valid;
-}
-
-function validateField(field) {
-    if(!field.checkValidity()) {
-        field.nextElementSibling.textContent = field.validationMessage;
-
-        return false;
-    } else {
-        field.nextElementSibling.textContent = '';
-        
-        return  true;
-    }
-}
+  });

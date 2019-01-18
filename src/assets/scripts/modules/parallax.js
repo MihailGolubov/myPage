@@ -6,7 +6,7 @@ window.onload = function() {
         const initialY = (window.innerHeight / 2) - e.pageY;
     
         layers.forEach((layer, i) => {
-            const divider = i / 100;
+            const divider = i / 125;
             const positionX = initialX * divider;
             const positionY = initialY * divider;
             const bottomPosition = (window.innerHeight / 2) * divider;

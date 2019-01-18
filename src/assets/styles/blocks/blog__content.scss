@@ -71,6 +71,23 @@ body{
         margin-right: 30px;
     }
 }
+.column-left.active {
+    width: 70%;
+    position: fixed;
+    z-index: 50;
+    height: 100vh;
+    justify-content: center;
+    background-color: #00bfa5;
+}
+.column-left.active .button-blog{
+    right: -8%;
+    left: auto;
+    position: absolute;
+}
+.column-right.active {
+    width: 30%;
+    margin-left: 70%;
+}
 .column-right{
     display: flex;
     flex-direction: column;
@@ -170,10 +187,11 @@ body{
     flex-direction: column;
 }
 .button-blog{
-    position: absolute;
+    position: fixed;
     display: none;
     height: 40px;
     width: 20px;
+    z-index: 51;
     top: 50%;
     background-color: #00bfa5;
     border-radius: 0 100% 100% 0 / 0 50% 50% 0;

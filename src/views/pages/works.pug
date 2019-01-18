@@ -105,20 +105,20 @@ block content
                   .people__date
                     .people__name Сабанцев Владимир
                     .people__works преподаватель
-            .contact__me-form#contactMeForm
+            form(onsubmit='return validate();', instead='', of='').contact__me-form#contactMeForm 
                 .b-works-form__blur
                 .form.form__contact
                   .name__form
                     .name__form-text Связаться со мной
+                label.label-form.field(for="")
+                  input(type='text', name='name',required='true', placeholder='  Имя' value="").input-name
+                  .error#demo
+                label.label-form.field(for="")
+                  input(name='email', required='true', type='email', placeholder='  Email')
+                  .error#demo
                 label.label-form(for="")
-                  input(type='text', name='name',required, placeholder='  Имя')
-                  .error
-                label.label-form(for="")
-                  input(name='email', required='', type='email', placeholder='  Email')
-                label.label-form(for="")
-                .error
-                textarea#textareaMessage(name='message',required='', placeholder='  Ваше сообщение')
-                .error
+                textarea#textareaMessage.field(name='message',required='true', placeholder='  Ваше сообщение')
+                .error#demo
                 .form__buttons
                   button.form__send#sendContactMe Отправить
                   button.form__clear Очистить
