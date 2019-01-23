@@ -17,9 +17,15 @@ window.onload = function() {
     window.addEventListener('mousemove', moveLayers)
 
     const openLogin = document.getElementById('login');
+    const backFlip = document.getElementById('backFlip');
     const flipElements = document.querySelectorAll('.flip-element');
     openLogin.addEventListener('click', function ()  {
     for (var i = 0; i < flipElements.length; i++) {
     flipElements[i].classList.toggle('active');
-        }});
+    }});
+
+    backFlip.addEventListener('click', function ()  {
+    for (var i = 0; i < flipElements.length; i++) {
+    flipElements[i].classList.toggle('active');
+    }});
     };

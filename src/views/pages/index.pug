@@ -35,7 +35,7 @@ body
               img.parallax__layer-img(src="./assets/images/layer-10.png", alt="")
 
         .flip-container
-          .welcome-anchors.flip-element
+          .welcome-anchors.flip-element#flipClosed
             .anchors-container
               .user
                 .user__photo
@@ -63,7 +63,7 @@ body
                   a.welcome__anchor-text(href="about.html") Обо мне
                 .blog__link
                   a.welcome__anchor-text(href="blog.html") Блог
-          .login-container.flip-element
+          .login-container.flip-element#flipOpened
             .login-form
               .form-name
               span.name-txt Авторизуйтесь
@@ -94,7 +94,7 @@ body
                   span.radio-no
                   span.radio-text Не уверен
               .login-buttons
-                button.anchor-home На Главную
+                button.anchor-home#backFlip На Главную
                 button.anchor-log Войти
         .hero-copyright
           span.hero-copyright__text Голубов Михаил | создано с любовью в Lofschol | 2019

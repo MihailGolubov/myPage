@@ -4,6 +4,7 @@ block variables
   - var title = 'Обо мне'
 
 block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCLw9FxynTlkMtDDDKbSZ_usaiph2AG4n0=initMap', defer='', async='')
   script(src='about.bundle.js')
 
 block content
@@ -54,7 +55,7 @@ block content
                         a.navigation-anchor(href="about.html")
                           p.links-text Обо мне
                       li.navigation-links__elem.link-elem--4
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="index.html")
                           p.links-text Авторизация
           .header__arrow-down
             a.svg__arrow-header(href="#aboutContent")
@@ -101,6 +102,7 @@ block content
               .about__right-content
                 #skills-component
       .map-footer-container
+          #map
           .contacts-container
             .contacts-wrapper
               .contact__name

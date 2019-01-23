@@ -3,9 +3,6 @@ const sendContactMe = document.querySelector('#sendContactMe');
 const name = document.querySelector('input[name="name"]');
 const email = document.querySelector('input[name="email"]');
 const message = document.querySelector('textarea[name="message"]');
-const nameValue = name.value;
-const emailValue = email.value;
-const messageValue = message.value;
 
 
 sendContactMe.addEventListener('click', function (event) {
