@@ -2,8 +2,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url(./assets/images/map.png);
-    background-size: cover;
 }
 .contacts-container{
     width: auto;
@@ -19,4 +17,7 @@
     background-color: #fcfcfc;
     opacity: 0.85;
     border-radius: 2%;
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 100%;
+    }
 }

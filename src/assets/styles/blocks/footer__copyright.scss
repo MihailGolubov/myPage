@@ -5,6 +5,16 @@
     width: 50%;
     height: 100%;
     margin-right: 50px;
+    @media (min-width: 768px) and (max-width: 1200px) {
+       margin: 0;
+       justify-content: center;
+       text-align: center;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        margin: 0;
+        width: 92%;
+        text-align: center;
+    }
 }
 .footer-copyright-left{
     display: flex;
@@ -13,6 +23,17 @@
     justify-content: flex-start;
     width: 50%;
     margin-left: 40px;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        text-align: center;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        margin: 0;
+        width: 92%;
+        text-align: center;
+    }
 }
 .make__in .make__off{
     opacity: 0.5;

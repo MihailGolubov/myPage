@@ -1,13 +1,35 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="./main.min.css")
-    title Document
-body
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+
+block scripts
+  script(src='about.bundle.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCLw9FxynTlkMtDDDKbSZ_usaiph2AG4n0&callback=initMap', defer='', async='')
+
+block content
     .about-wrapper
+      .parallax
+        .parallax-layer
+          img.parallax__layer-img.img-modify1(src="./assets/images/layer-1.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img.img-modify2(src="./assets/images/layer-2.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-3.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-4.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img.img-modify5(src="./assets/images/layer-5.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-6.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-7.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img.img-modify8(src="./assets/images/layer-8.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-9.png", alt="")
+        .parallax-layer
+          img.parallax__layer-img(src="./assets/images/layer-10.png", alt="")
       header.header
           .user-wrap
             .user
@@ -17,22 +39,23 @@ body
               span.user__profession Личный сайт веб разработчика
           .navigation
               .navigation-container
-                .navigation__closed
-                  a.closed__icon(href="#")
-                .navigation-open
+                button.hamburger.hamburger--collapse#ClosedMenu(type='button')
+                  span.hamburger-box
+                    span.hamburger-inner
+                .navigation-open#OpenMenu
                   .navigation-links
                     ul.navigation-links__wrapper
                       li.navigation-links__elem.link-elem--1
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="works.html")
                           p.links-text Мои работы
                       li.navigation-links__elem.link-elem--2
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="blog.html")
                           p.links-text Блог
                       li.navigation-links__elem.link-elem--3
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="about.html")
                           p.links-text Обо мне
                       li.navigation-links__elem.link-elem--4
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="index.html")
                           p.links-text Авторизация
           .header__arrow-down
             a.svg__arrow-header(href="#aboutContent")
@@ -76,77 +99,10 @@ body
               .my__utility-container
                 h1.content__my-utility Чем я могу быть<br>вам полезен
               .my__utility__details Больше всего меня привлекет Frontend разработка,но я также знаком и могу решать не сложные задачи на Backend.Но давай по порядку.
-              .skills-container
-                .skills-rows
-                  .skills-row.skills-row-frontend
-                    h3.name__circle Frontend
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='75,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text HTML5
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text CSS3
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text JavaScript and<br>jQuery
-                .skills-rows
-                  .skills-row.skills-row-Backend
-                    h3.name__circle Backend
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text PHP
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text mySQL
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text Node.js 
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text Mongo.db
-                .skills-rows
-                  .skills-row.skills-row-Workflow
-                    h3.name__circle Workflow
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text Git
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text Gulp
-                    .circle__container
-                      svg.circle-chart(viewbox='0 0 33.83098862 33.83098862' width='120' height='120' xmlns='http://www.w3.org/2000/svg')
-                        circle.circle-chart__background(stroke='#dfdcd5' stroke-width='4' fill='none' cx='16.91549431' cy='16.91549431' r='15.91549431')
-                        circle.circle-chart__circle(stroke='#11c2a9' stroke-width='5' stroke-dasharray='85,100' stroke-linecap='butt' fill='none' cx='16.91549431' cy='16.91549431' r='17.91549431')
-                      .skill__name-container
-                        h3.skill__name-text Bower
+              .about__right-content
+                #skills-component
       .map-footer-container
+          #map
           .contacts-container
             .contacts-wrapper
               .contact__name

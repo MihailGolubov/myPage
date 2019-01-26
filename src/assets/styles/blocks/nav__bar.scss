@@ -4,6 +4,7 @@ right: 0;
 top: 0;
 width: auto;
 height: auto;
+z-index: 50;
 }
 .navigation-container{
     position: relative;
@@ -13,44 +14,6 @@ height: auto;
     flex-direction: column;
 
 }
-.navigation__closed{
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    width: 35px;
-    height: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.closed__icon{
-    display: flex;
-    width: 35px;
-    height: 5px;
-    border-radius: 20%;
-    background-color: #fff;
-    cursor: pointer;
-}
-.navigation__closed::after{
-    content: "";
-    display: flex;
-    width: 35px;
-    height: 5px;
-    border-radius: 20%;
-    background-color: #fff;
-    cursor: pointer;
-}
-.navigation__closed::before{
-    content: "";
-    display: flex;
-    width: 35px;
-    height: 5px;
-    border-radius: 20%;
-    background-color: #fff;
-    bottom: 10px;
-    cursor: pointer;
-}
 
 .navigation-open{
     display: flex;
@@ -58,21 +21,30 @@ height: auto;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 0vh;
     background-color: #00bfa5;
     opacity: 0.87;
     z-index: 100;
     align-items: center;
     transition: 0.5s;
-    display: none;
+    display: flex;
+    z-index: 10;
+}
+.navigation-open{
+    justify-content: center;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.navigation-open--opened{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
 }
 .navigation-links{
     text-align: center;
     margin-bottom: 30vh; 
-}
-.navigation-open{
-    width: 100vw;
-    justify-content: center;
 }
 .links-text{
     color: #fff;
@@ -80,12 +52,17 @@ height: auto;
     font-size: 63px;
     font-weight: 400;
     letter-spacing: 1.57px;
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 35px;
+    }
 }
 .navigation-anchor {
     text-decoration: none;
 }
 .navigation-links__elem{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .navigation-links__elem::after{
     content: "";
@@ -109,6 +86,14 @@ height: auto;
     top: 50%;
     left: -20%;
 }
+
+#ClosedMenu{
+    position: fixed;
+    z-index: 30;
+    right: 27px;
+    top: 27px;
+}
+
 .link-elem--1::after{
     right: -10%;
 }

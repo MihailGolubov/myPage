@@ -1,0 +1,37 @@
+.parallax{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.parallax-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+}
+.parallax__layer-img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: inherit;
+}
+.img-modify1{
+    min-width: max-content;
+}
+.img-modify2{
+    width: max-content;
+}
+.img-modify5{
+    width: auto;
+}
+.img-modify8{
+    bottom: -22%;
+}
+.parallax--blog{
+    z-index: -10;
+}

@@ -9,7 +9,14 @@ body{
     flex-direction: column;
 }
 
-
+.blog-anchor{
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #455a64;
+}
 .name__prefix-accordeon::after{
     content: "";
     position: absolute;
@@ -24,30 +31,72 @@ body{
 }
 .content-section{
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    background-color: #efeee9;
+
 }
 .blog-container{
     display: flex;
     justify-content: space-between;
     width: 75%;
-    height: 95%;
-    overflow: hidden;
+    height: auto;
+    position: relative;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 100%;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+    width: 100%;
+    }
 }
 .column-left{
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: auto;
+    height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 0;
+        margin-right: 30px;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 0;
+        margin-right: 30px;
+    }
+}
+.column-left.active {
+    width: 70%;
+    position: fixed;
+    z-index: 50;
+    height: 100vh;
+    justify-content: center;
+    background-color: #00bfa5;
+}
+.column-left.active .button-blog{
+    left: 100%;
+    position: absolute;
+}
+.column-right.active {
+    width: 30%;
+    margin-left: 70%;
 }
 .column-right{
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 65%;
     height: auto;
+    overflow: hidden;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 96%;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 96%;
+    }
 }
 .left-elem,
 .left-elem__text
@@ -71,27 +120,36 @@ body{
 .left-elem{
     position: relative;
     margin: 10px 0;
+    @media (min-width: 320px) and (max-width: 1200px) {
+        margin-right: 10px;
+    }
+
 }
-.left-elem::after{
+.left-elem--active::after{
     content: "";
-    opacity: 0;
+    opacity: 1;
     display: flex;
-    position: absolute;
-    right: -10px;
+    margin: 0px 10px;
+    margin-right: -10px;
     width: 3px;
     height: 42px;
     background-color: #00bfa5;
     transition: all 1s;
 }
-.left-elem:hover:after{
-    opacity: 1;
+.left-elem--active  .blog-anchor{
+    font-weight: 700;
+    color: #00bfa5;
 }
+
 .content__name{
     color: #455a64;
     font-family: bernier;
     font-size: 35px;
     font-weight: 400;
     line-height: 41px;
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 21px;
+    }
 }
 .content__date{
     opacity: 0.7;
@@ -107,6 +165,9 @@ body{
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 .right-content__name,
 .right-content__date,
@@ -114,6 +175,10 @@ body{
 .right-content__img
 {
     margin: 5px 0;
+    @media (min-width: 320px) and (max-width: 768px) {
+        text-align: left;
+        width: 90%;
+    }
 }
 .right-elements{
     position: relative;
@@ -122,16 +187,36 @@ body{
     display: flex;
     flex-direction: column;
 }
-.right-elements--line::after{
-    content: "";
-    display: flex;
-    bottom: -20px;
-    width: 681px;
-    height: 5px;
-    background-color: #373e42;
-    opacity: 0.07;
-    margin: 40px 0;
-}
 .button-blog{
+    position: sticky;
     display: none;
+    height: 40px;
+    width: 20px;
+    z-index: 51;
+    top: 50%;
+    background-color: #00bfa5;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    left: 0;
+    @media (min-width: 768px) and (max-width: 1200px) {
+        display: block;
+    }
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.right-elements::after{
+    display: flex;
+    content: "";
+    width: 100%;
+    background-color: #393e42;
+    opacity: 0.07;
+    height: 5px;
+    margin: 20px 0px;
+}
+
+.left-elem--active .blog-anchor{
+    @media (min-width: 320px) and (max-width: 1200px) {
+        color: aquamarine;
+    }
 }

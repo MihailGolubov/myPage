@@ -1,14 +1,36 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="./main.min.css")
-    title Document
-body
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои Работы'
+  
+
+block scripts
+  script(src='works.bundle.js')
+  
+block content
       section.works
         .page-works
+          .parallax
+            .parallax-layer
+              img.parallax__layer-img.img-modify1(src="./assets/images/layer-1.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify2(src="./assets/images/layer-2.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-3.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-4.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify5(src="./assets/images/layer-5.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-6.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-7.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify8(src="./assets/images/layer-8.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-9.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-10.png", alt="")
           header.header.header--works
             .user-wrap
               .user
@@ -18,22 +40,23 @@ body
                 span.user__profession Личный сайт веб разработчика
             .navigation
               .navigation-container
-                .navigation__closed
-                  a.closed__icon(href="#")
-                .navigation-open
+                button.hamburger.hamburger--collapse#ClosedMenu(type='button')
+                  span.hamburger-box
+                    span.hamburger-inner
+                .navigation-open#OpenMenu
                   .navigation-links
                     ul.navigation-links__wrapper
                       li.navigation-links__elem.link-elem--1
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="works.html")
                           p.links-text Мои работы
                       li.navigation-links__elem.link-elem--2
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="blog.html")
                           p.links-text Блог
                       li.navigation-links__elem.link-elem--3
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="about.html")
                           p.links-text Обо мне
                       li.navigation-links__elem.link-elem--4
-                        a.navigation-anchor(href="#")
+                        a.navigation-anchor(href="index.html")
                           p.links-text Авторизация
             .header__arrow-down
               a.svg__arrow-header(href="#aboutContent")
@@ -54,48 +77,15 @@ body
                     svg.svg__icon-in
                       use(xlink:href='./assets/images/icons/sprite.svg#in')
         .works__content
-          .works__content-container
+          .works-wrapper
             .works__name-container
               h1.works__name-txt Мои работы
-            .works__content-left
-              .about__project
-                .about__project-container
-                  .about__project-name
-                    h2.project-name__wrapper Сайт школы онлайн<br>образования
-                  .about__project-tehnologies
-                    h3.project-tehnologies-text HTML, CSS, JAVASCRIPT
-                  .about__project-link
-                    button.works__projects-links(href="#")
-                      span
-                        svg.svg__icon-link
-                          use(xlink:href='./assets/images/icons/sprite.svg#link')
-                      span.projects-links-text Посмотреть сайт
-            .works__content-right
-              .works__slider.works__slider-active
-                .screen__container
-                  .site__screen-slider
-                    img(src="./assets/images/sliderBg.png", alt="")
-              .inactive__slider-background
-              .works__slider-inactive
-                .works__sliders
-                  .site__screen-slider
-                    img(src="./assets/images/works__slider1.png", alt="")
-                .works__sliders
-                  .site__screen-slider
-                    img(src="./assets/images/works__slider2.png", alt="")
-              .works__slider-arrows
-                .slider__arow-up
-                  a.svg__arrow-slider(href="#")
-                    svg.svg__arow-down
-                      use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-                .slider__arrow-up
-                  a.svg__arrow-slider(href="#aboutContent")
-                    svg.svg__arow-up
-                      use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-        .comment__section
-          .comment__container
+            .slider-container
+              #slider-component
+        .comment__section#commentSection
+          .comment__container#commentContainer
             .comment__container-name
-              .coment__name-txt Что обо мне говорят
+              .coment__name-txt Что обо мне<br>говорят
             .comment__people
               .comment__people-container
                 .comment__people-symbol
@@ -115,26 +105,28 @@ body
                   .people__date
                     .people__name Сабанцев Владимир
                     .people__works преподаватель
-            .contact__me-form
-                .form__bg
+            form(onsubmit='return validate();', instead='', of='').contact__me-form#contactMeForm 
+                .b-works-form__blur
                 .form.form__contact
                   .name__form
                     .name__form-text Связаться со мной
-                label(for="")
-                  input(type='text', name='name', placeholder='  Имя')
-                label(for="")
-                  input(type='text', name='email', placeholder='  Email')
-                label(for="")
-                  textarea#textareaMessage(placeholder='  Ваше сообщение')
+                label.label-form.field(for="")
+                  input(type='text', name='name',required='true', placeholder='  Имя' value="").input-name
+                  .error#demo
+                label.label-form.field(for="")
+                  input(name='email', required='true', type='email', placeholder='  Email')
+                  .error#demo
+                label.label-form(for="")
+                textarea#textareaMessage.field(name='message',required='true', placeholder='  Ваше сообщение')
+                .error#demo
                 .form__buttons
-                  button.form__send Отправить
+                  button.form__send#sendContactMe Отправить
                   button.form__clear Очистить
             .slider__arow-up
                   a.svg__arrow-slider(href="works.html")
                     svg.svg__arow-up
                       use(xlink:href='./assets/images/icons/sprite.svg#arrow_down')
-        footer
-          footer.footer.footer--works
+        .footer.footer--works
             .footer-contacts
               .footer-left-contacts
                 ul.footer-link

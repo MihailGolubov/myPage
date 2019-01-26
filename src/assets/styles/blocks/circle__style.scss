@@ -5,6 +5,11 @@
 svg:not(:root){
     overflow: inherit;
 }
-
+.circle-chart{
+    @media (min-width: 1200px) and (max-width: 1800px) {
+        width: 105px;
+        height: 105px;
+    }
+}
 
 

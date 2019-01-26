@@ -1,19 +1,25 @@
 .welcome__page{
     position: relative;
 }
-.page-background{
-    position: absolute;
-    background-image: url(./assets/images/bg-img.png);
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-}
 .welcome__content{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+}
+.hero-copyright{
+    position: absolute;
+    z-index: 5;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hero-copyright__text{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
 }

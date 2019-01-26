@@ -5,37 +5,98 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./main.min.css")
+    script(src='auth.bundle.js')
     title Document
 body
   section
     .welcome-page
       .welcome-container
         .page-background
-        .welcome-anchors
-          .anchors-container
-            .user
-              .user__photo
-                img.img-border(src="./assets/images/mefunn.jpg", alt="")
-              span.user__name.welcome-name Михаилу Голубов
-              span.user__profession.welcome-profession Личный сайт веб разработчика
-            .welcome__my-socials
-              .socials
-                .social.social-vk
-                  a.svg__vk(href="#")
-                    svg.svg__icon-vk
-                        use(xlink:href='./assets/images/icons/sprite.svg#vk')
-                .social.social-github
-                  a.svg__github(href="#")
-                    svg.svg__icon-github
-                        use(xlink:href='./assets/images/icons/sprite.svg#github')
-                .social.social-in
-                  a.svg__in(href="#")
-                    svg.svg__icon-in
-                        use(xlink:href='./assets/images/icons/sprite.svg#in')
-            .link-buttons
-              .works__link
-                a.welcome__anchor-text(href="works.html") Мои работы
-              .about__link
-                a.welcome__anchor-text(href="about.html") Обо мне
-              .blog__link
-                a.welcome__anchor-text(href="blog.html") Блог
+          .parallax
+            .parallax-layer
+              img.parallax__layer-img.img-modify1(src="./assets/images/layer-1.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify2(src="./assets/images/layer-2.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-3.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-4.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify5(src="./assets/images/layer-5.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-6.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-7.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img.img-modify8(src="./assets/images/layer-8.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-9.png", alt="")
+            .parallax-layer
+              img.parallax__layer-img(src="./assets/images/layer-10.png", alt="")
+
+        .flip-container
+          .welcome-anchors.flip-element#flipClosed
+            .anchors-container
+              .user
+                .user__photo
+                  img.img-border(src="./assets/images/mefunn.jpg", alt="")
+                span.user__name.welcome-name Михаил Голубов
+                span.user__profession.welcome-profession Личный сайт веб разработчика
+              .welcome__my-socials
+                .socials
+                  .social.social-vk
+                    a.svg__vk(href="#")
+                      svg.svg__icon-vk
+                          use(xlink:href='./assets/images/icons/sprite.svg#vk')
+                  .social.social-github
+                    a.svg__github(href="#")
+                      svg.svg__icon-github
+                          use(xlink:href='./assets/images/icons/sprite.svg#github')
+                  .social.social-in
+                    a.svg__in(href="#")
+                      svg.svg__icon-in
+                          use(xlink:href='./assets/images/icons/sprite.svg#in')
+              .link-buttons
+                .works__link
+                  a.welcome__anchor-text(href="works.html") Мои работы
+                .about__link
+                  a.welcome__anchor-text(href="about.html") Обо мне
+                .blog__link
+                  a.welcome__anchor-text(href="blog.html") Блог
+          .login-container.flip-element#flipOpened
+            .login-form
+              .form-name
+              span.name-txt Авторизуйтесь
+              label.form-input.form-input-login(for="")
+                span.form-icons.form-icons--login
+                  svg.svg__icon-form
+                    use(xlink:href='./assets/images/icons/sprite.svg#login')
+                input.input-login(type='text', name='input-login', placeholder='  Логин')
+              label.form-input.form-input-password(for="")
+                span.form-icons.form-icons--password
+                  svg.svg__icon-form
+                    use(xlink:href='./assets/images/icons/sprite.svg#password')
+                input.input-password(type='text', name='input-password', placeholder='  Пароль')
+              label.check-human(for="")
+                span.check-text Я человек
+                input(type="checkbox" name="checkbox-test")#checkHuman
+                span.check-custom
+                  svg.svg__icon-form.svg-checkbox
+                    use(xlink:href='./assets/images/icons/sprite.svg#check')
+              .checks-text Вы точно не робот?
+              .form-checks
+                label.human-yes(for="")
+                  input(type="radio", name="human")#checkedYes
+                  span.radio-yes
+                  span.radio-text Да
+                label.human-no(for="")
+                  input(type="radio", name="human")#checkedNo
+                  span.radio-no
+                  span.radio-text Не уверен
+              .login-buttons
+                button.anchor-home#backFlip На Главную
+                button.anchor-log Войти
+        .hero-copyright
+          span.hero-copyright__text Голубов Михаил | создано с любовью в Lofschol | 2019
+        .auth-buttons
+          button.authorization-button#login Авторизоваться
