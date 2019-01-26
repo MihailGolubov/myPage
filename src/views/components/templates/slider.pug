@@ -30,10 +30,10 @@ script(type="text/x-template")#slider-display
 script(type="text/x-template")#slider-btns
   .slider__buttons
     .slider__button(@click="slide('prev')")
-      div.slider__button-container
-        div.slider__button-img-wrap()
+      transition-group(name="slide-down" tag="div").slider__button-container
+        div.slider__button-img-wrap(:key="nextButtonWorks[index].photo")
           img(:src="prevButtonWorks[index].photo", alt="").slider__button-pic
     .slider__button.slider__button_next(@click="slide('next')")
-      div.slider__button-container
-        div.slider__button-img-wrap()
+      transition-group(name="slide-up" tag="div").slider__button-container
+        div.slider__button-img-wrap(:key="nextButtonWorks[index].photo")
           img(:src="nextButtonWorks[index].photo", alt="").slider__button-pic

@@ -5,6 +5,8 @@ block variables
 
 block scripts
   script(src='blog.bundle.js')
+  script(src='https://code.jquery.com/jquery-3.3.1.js', crossorigin='anonymous', integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=')
+
 
 block content
     .blog-wrapper
@@ -145,4 +147,8 @@ block content
                 span.make__in Я веб-разработчик из Кишинева, и этот сайт я сделал,<br>в рамках обучения в Школе онлайн образования LoftSchool. 
               .footer-copyright-right
                 span.make__off © Голубов Михаил | создано с любовью в LoftSchool | 2019
+    .preloader
+      .preloader__spinner
+        .preloader__animation
+        .preloader__percents 0%
 
