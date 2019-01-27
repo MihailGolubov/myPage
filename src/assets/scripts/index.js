@@ -1,3 +1,5 @@
+import preloader from "./modules/preloader"
+document.addEventListener("DOMContentLoaded", preloader);
 window.onload = function() {
     const parallaxContainer = document.querySelector('.parallax');
     const layers = Array.from(parallaxContainer.children);

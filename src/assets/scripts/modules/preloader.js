@@ -1,3 +1,6 @@
+import $ from "jquery";
+
+
 let percentsTotal = 0;
 const preloader = $('.preloader');
 
