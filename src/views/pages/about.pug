@@ -4,8 +4,8 @@ block variables
   - var title = 'Обо мне'
 
 block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyABMVDqkLdKh_gYee89lEb9QJRe7WGq5fA&callback=initMap', defer='')
   script(src='about.bundle.js')
-  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCLw9FxynTlkMtDDDKbSZ_usaiph2AG4n0&callback=initMap', defer='', async='')
 
 block content
     .about-wrapper

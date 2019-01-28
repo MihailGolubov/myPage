@@ -111,14 +111,14 @@ block content
                   .name__form
                     .name__form-text Связаться со мной
                 label.label-form.field(for="")
-                  input(type='text', name='name',required='true', placeholder='  Имя' value="").input-name
-                  .error#demo
+                  input(type='text', name='name',required='true', placeholder='  Имя' value="",title="www").input-name
+                  .error
                 label.label-form.field(for="")
                   input(name='email', required='true', type='email', placeholder='  Email')
-                  .error#demo
+                  .error
                 label.label-form(for="")
                 textarea#textareaMessage.field(name='message',required='true', placeholder='  Ваше сообщение')
-                .error#demo
+                .error
                 .form__buttons
                   button.form__send#sendContactMe Отправить
                   button.form__clear Очистить
